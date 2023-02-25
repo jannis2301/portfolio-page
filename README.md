@@ -10,4 +10,4 @@ A portfolio web page with some of the projects I have worked on.
 
 ## View the App
 
--On [Netlify](https://masterminds-23.netlify.app/)
+-On [Netlify](https://jannis-portfolio-page.netlify.app/)
