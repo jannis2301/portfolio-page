@@ -115,20 +115,19 @@
   .portfolio-nav {
     max-width: 31.25rem;
     margin: 1.25rem auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem;
     animation: fadeIn 2.5s 2s;
     animation-fill-mode: backwards;
 
     .btn {
+      display: inline-block;
       margin: 0;
       padding: 0.6rem;
     }
 
     .dots {
+      display: inline-block;
       height: 1rem;
+      margin: 0 0.8rem;
 
       .dot {
         background: transparent;
