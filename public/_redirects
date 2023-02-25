@@ -1,1 +1,4 @@
-/about /portfolio /contact /*
+/about /about
+/portfolio /portfolio
+/contact /contact
+/* /*
