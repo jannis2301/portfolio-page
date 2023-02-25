@@ -1,0 +1,42 @@
+.about-page {
+  justify-content: center;
+  gap: clamp(0.625rem, 4vw, 3.75rem);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .techstack-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.625rem;
+    animation: flipInX 1.5s 1.5s;
+    animation-fill-mode: backwards;
+
+    .tech-cards {
+      padding: clamp(1rem, 6vw, 1.25rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      border-radius: $radius10;
+      box-shadow: $boxShadow;
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        max-width: clamp(3rem, 10vw, 5rem);
+        width: 100vw;
+        height: clamp(3rem, 10vw, 5rem);
+        color: $primary-color;
+      }
+
+      &:hover {
+        background: $primary-color;
+        svg {
+          color: $white;
+        }
+      }
+    }
+  }
+}

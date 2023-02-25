@@ -1,0 +1,19 @@
+.home-page {
+  h2 {
+    margin-left: -0.8125rem;
+  }
+
+  .solid-logo {
+    max-width: 32rem;
+    width: 100%;
+    animation: backInRight 1.5s 1.5s backwards;
+    z-index: 1;
+
+    @media (max-width: 1400px) {
+      max-width: 24rem;
+    }
+    @media (max-width: 990px) {
+      display: none;
+    }
+  }
+}

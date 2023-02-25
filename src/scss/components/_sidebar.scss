@@ -1,0 +1,202 @@
+.sidebar {
+  max-width: 5.5rem;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $navbar-bg;
+  text-align: center;
+  //border-left: 1px solid rgba($white, 0.2);
+  z-index: 10;
+
+  .logo {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 0.5rem auto;
+    width: 2.375rem;
+    height: auto;
+
+    &.sub-logo {
+      width: 3.125rem;
+    }
+  }
+
+  .menu-icon {
+    color: $primary-color;
+    font-size: 1.875rem;
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-links {
+      display: grid;
+      grid-gap: 2rem;
+    }
+
+    a {
+      position: relative;
+      font-size: 1.375rem;
+      color: $white;
+
+      svg {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.5625rem;
+        letter-spacing: 2px;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    .home-link:first-child {
+      &::after {
+        content: 'HOME';
+      }
+    }
+
+    .about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+
+    .contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
+    }
+
+    .portfolio-link {
+      &:after {
+        content: 'PORTFOLIO';
+      }
+    }
+
+    a.active {
+      color: $primary-color;
+      svg {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    a {
+      padding: 0.4375rem 0;
+      font-size: 0.9375rem;
+      line-height: 1rem;
+
+      svg {
+        color: $white;
+      }
+
+      &:hover svg {
+        color: $primary-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    background: transparent;
+    position: initial;
+    height: auto;
+    min-height: auto;
+
+    .social-links {
+      flex-direction: row;
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+
+    nav {
+      height: 100%;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      justify-content: center;
+      gap: 5rem;
+      background: $navbar-bg;
+      transition: all 0.4s ease-in-out;
+      z-index: 10;
+
+      &.mobile-show {
+        left: 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+
+        &:after {
+          margin-left: 0.7rem;
+          position: initial;
+          font-size: 0.7rem;
+          transform: none;
+          opacity: 1;
+        }
+
+        & svg {
+          opacity: 1 !important;
+        }
+
+        &:hover svg {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 1.875rem;
+      right: 1.875rem;
+      display: block;
+      cursor: pointer;
+      z-index: 8;
+    }
+  }
+}

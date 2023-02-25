@@ -1,0 +1,117 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 0.6875rem/1.4 $primary-font;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $primary-bg;
+  text-shadow: $textShadow;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    overflow: visible;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  position: relative;
+  color: $white;
+  font-size: clamp(1.875rem, 6vw, 3rem);
+  line-height: clamp(2rem, 6vw, 3.3125rem);
+  font-family: $third-font;
+  font-weight: 700;
+
+  &:before,
+  &:after {
+    content: '<h1>';
+    font-family: $secondary-font;
+    color: $primary-color;
+    font-size: 0.75rem;
+    font-weight: 400;
+    position: absolute;
+    margin-top: -2.5rem;
+    left: -0.9375rem;
+    opacity: 0.6;
+  }
+
+  &:after {
+    content: '</h1>';
+    bottom: -2.8125rem;
+  }
+}
+
+h2 {
+  color: $white;
+  margin: 2.5rem 0 1.5rem 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: $third-font;
+  letter-spacing: 3px;
+  animation: fadeIn 1s 1.8s backwards;
+}
+
+input,
+textarea {
+  font-family: $primary-font;
+}
+
+.btn {
+  margin: 1.5625rem 0 0 -0.8125rem;
+  padding: 0.625rem 1.125rem;
+  font-family: $third-font;
+  font-size: 0.8125rem;
+  letter-spacing: 4px;
+  color: $primary-color;
+  background: transparent;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  border: 1px solid $primary-color;
+  animation: fadeIn 1s 1.8s backwards;
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+svg {
+  display: block;
+}

@@ -1,0 +1,10 @@
+.error-page {
+  flex-direction: column;
+  gap: 3.75rem;
+
+  img {
+    max-width: 22.5rem;
+    width: 100%;
+    animation: fadeIn 2s 2s backwards;
+  }
+}
