@@ -1,0 +1,16 @@
+[[redirects]]
+  from = "/about"
+  to = "/about"
+  status = 301
+
+  from = "/portfolio"
+  to = "/portfolio"
+  status = 301
+
+  from = "/contact"
+  to = "/contact"
+  status = 301
+
+  from = "/*"
+  to = "/index.html"
+  status = 200
