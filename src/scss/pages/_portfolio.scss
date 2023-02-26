@@ -127,13 +127,6 @@
       display: inline-block;
       margin: 0;
       padding: 0.6rem;
-
-      @media (max-width: 550px) {
-        padding: 0.4rem;
-        svg {
-          font-size: 0.8rem;
-        }
-      }
     }
 
     .dots {
@@ -142,10 +135,9 @@
       gap: 0.6rem;
 
       .dot {
+        padding: 0.4rem;
         background: transparent;
         border: 1px solid $primary-color;
-        width: clamp(0.8rem, 2vw, 1rem);
-        height: clamp(0.8rem, 2vw, 1rem);
         border-radius: 50%;
         cursor: pointer;
 
