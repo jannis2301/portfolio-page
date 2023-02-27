@@ -8,34 +8,69 @@
   }
 
   .techstack-box {
+    max-width: 23.75rem;
+    width: 100%;
+    min-height: 15.625rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.625rem;
+    perspective: 62.5rem;
     animation: flipInX 1.5s 1.5s;
     animation-fill-mode: backwards;
 
     .tech-cards {
+      position: relative;
       padding: clamp(1rem, 6vw, 1.25rem);
       display: flex;
       justify-content: center;
       align-items: center;
       background: $white;
+      color: $primary-color;
+      font-family: $secondary-font;
+      font-size: clamp(0.65rem, 3vw, 1rem);
+      text-shadow: none;
       border-radius: $radius10;
       box-shadow: $boxShadow;
+      transform-style: preserve-3d;
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &.flip {
+        transform: translate3d(0, 0, 0) rotateY(180deg);
+      }
+
+      &.flip .front-face {
+        transform: rotateY(180deg);
+      }
+
+      &.flip .back-face {
+        transform: rotateY(0deg) scaleX(-1);
+      }
+
+      .front-face,
+      .back-face {
+        position: absolute;
+        backface-visibility: hidden;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .front-face {
+        transform: rotateY(0deg);
+      }
+
+      .back-face {
+        transform: rotateY(180deg);
+      }
 
       svg {
         max-width: clamp(3rem, 10vw, 5rem);
-        width: 100vw;
+        width: 100%;
         height: clamp(3rem, 10vw, 5rem);
         color: $primary-color;
-      }
-
-      &:hover {
-        background: $primary-color;
-        svg {
-          color: $white;
-        }
       }
     }
   }
