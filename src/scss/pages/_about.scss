@@ -18,6 +18,10 @@
     animation: flipInX 1.5s 1.5s;
     animation-fill-mode: backwards;
 
+    @media (max-width: 550px) {
+      min-height: 12rem;
+    }
+
     .tech-cards {
       position: relative;
       padding: clamp(1rem, 6vw, 1.25rem);
@@ -34,10 +38,6 @@
       transform-style: preserve-3d;
       transition: all 0.3s ease-in-out;
       cursor: pointer;
-
-      &:hover {
-        transform: scale(1.02);
-      }
 
       &.flip {
         transform: translate3d(0, 0, 0) rotateY(180deg);
@@ -67,10 +67,15 @@
       }
 
       svg {
-        max-width: clamp(3rem, 10vw, 5rem);
+        max-width: 5rem;
         width: 100%;
-        height: clamp(3rem, 10vw, 5rem);
+        height: 5rem;
         color: $primary-color;
+
+        @media (max-width: 550px) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }
