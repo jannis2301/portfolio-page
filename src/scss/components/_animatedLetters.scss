@@ -12,7 +12,7 @@
 
   &:hover {
     animation: pulse 1s;
-    color: $primary-color;
+    color: var(--primary-color);
   }
 }
 

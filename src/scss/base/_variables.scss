@@ -1,21 +1,21 @@
-// Colors
-//$primary-bg: #133446;
-//$navbar-bg: #181818;
-$primary-color: #7fbc00;
-$primary-bg: #000;
-$navbar-bg: #000;
-$portfolio-card: #176050;
-$form-color: #000;
-$white: #fff;
-$black: #000;
-$gray: #8d8d8d;
+:root {
+  // Colors
+  --primary-color: #7fbc00;
+  --primary-bg: #000;
+  --navbar-bg: #000;
+  --portfolio-card: #176050;
+  --form-color: #000;
+  --white: #fff;
+  --black: #000;
+  --gray: #8d8d8d;
 
-// Font-Families
-$primary-font: 'Helvetica Neue', sans-serif;
-$secondary-font: 'JetBrains Mono', monospace;
-$third-font: 'Rubik', sans-serif;
+  // Font-Families
+  --primary-font: 'Helvetica Neue', sans-serif;
+  --secondary-font: 'JetBrains Mono', monospace;
+  --third-font: 'Rubik', sans-serif;
 
-$maxWidth: 56.25rem;
-$radius10: 0.625rem;
-$textShadow: -1px 2px 5px rgba($black, 0.2);
-$boxShadow: 0px 0px 5px rgba($black, 0.2);
+  --maxWidth: 56.25rem;
+  --radius10: 0.625rem;
+  --textShadow: -1px 2px 5px rgba(var(--black), 0.2);
+  --boxShadow: 0px 0px 5px rgba(var(--black), 0.2);
+}

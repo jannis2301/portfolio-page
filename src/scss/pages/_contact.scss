@@ -28,21 +28,21 @@
         input[type='email'],
         textarea {
           width: 100%;
-          border: 1px solid $primary-color;
-          background: $form-color;
+          border: 1px solid var(--primary-color);
+          background: var(--form-color);
           height: 3.125rem;
           font-size: clamp(0.8rem, 2vw, 1rem);
-          color: $primary-color;
+          color: var(--primary-color);
           padding: 0 1.25rem;
-          border-radius: $radius10;
+          border-radius: var(--radius10);
 
           &:focus {
-            border: 1px solid $primary-color;
+            border: 1px solid var(--primary-color);
             outline: 0;
           }
 
           &::placeholder {
-            color: $gray;
+            color: var(--gray);
           }
         }
 
@@ -60,8 +60,8 @@
           cursor: pointer;
 
           &:hover {
-            background: $primary-color;
-            color: $white;
+            background: var(--primary-color);
+            color: var(--white);
           }
         }
       }

@@ -1,32 +1,32 @@
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import { AnimatedLetters, Loader } from '../components'
-import { useTextAnimation } from '../hooks/useTextAnimation'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { AnimatedLetters, Loader } from '../components';
+import { useTextAnimation } from '../hooks/useTextAnimation';
 
 const Contact = () => {
-  const serviceId = process.env.REACT_APP_SERVICE_ID
-  const templateId = process.env.REACT_APP_TEMPLATE_ID
-  const publicKey = process.env.REACT_APP_PUBLIC_KEY
-  const contactArray = 'Contact me'.split('')
-  const letterClass = useTextAnimation()
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const contactArray = 'Contact me'.split('');
+  const letterClass = useTextAnimation();
 
-  const form = useRef()
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
-        console.log(result.text)
-        alert('Message sent successfully!')
-        window.location.reload(false)
+        console.log(result.text);
+        alert('Message sent successfully!');
+        window.location.reload(false);
       },
       (error) => {
-        console.log(error.text)
-        alert('Failed to sent the message, please try again!')
+        console.log(error.text);
+        alert('Failed to sent the message, please try again!');
       }
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -78,7 +78,7 @@ const Contact = () => {
       </section>
       <Loader />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

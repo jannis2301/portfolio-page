@@ -12,12 +12,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: 400 0.6875rem/1.4 $primary-font;
-  color: $white;
+  font-family: var(--primary-font);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $primary-bg;
-  text-shadow: $textShadow;
+  background: var(--primary-bg);
+  text-shadow: var(--textShadow);
   overflow: hidden;
 
   @media (max-width: 1200px) {
@@ -49,17 +52,17 @@ a:active {
 
 h1 {
   position: relative;
-  color: $white;
+  color: var(--white);
   font-size: clamp(1.875rem, 6vw, 3rem);
   line-height: clamp(2rem, 6vw, 3.3125rem);
-  font-family: $third-font;
+  font-family: var(--third-font);
   font-weight: 700;
 
   &:before,
   &:after {
     content: '<h1>';
-    font-family: $secondary-font;
-    color: $primary-color;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
     font-size: 0.75rem;
     font-weight: 400;
     position: absolute;
@@ -75,40 +78,40 @@ h1 {
 }
 
 h2 {
-  color: $white;
+  color: var(--white);
   margin: 2.5rem 0 1.5rem 0;
   font-weight: 400;
   font-size: 0.875rem;
-  font-family: $third-font;
+  font-family: var(--third-font);
   letter-spacing: 3px;
   animation: fadeIn 1s 1.8s backwards;
 }
 
 input,
 textarea {
-  font-family: $primary-font;
+  font-family: var(--primary-font);
 }
 
 .btn {
   margin: 1.5625rem 0 0 -0.8125rem;
   padding: 0.625rem 1.125rem;
-  font-family: $third-font;
+  font-family: var(--third-font);
   font-size: 0.8125rem;
   letter-spacing: 4px;
-  color: $primary-color;
+  color: var(--primary-color);
   background: transparent;
   white-space: nowrap;
   text-transform: uppercase;
   border-radius: 0.25rem;
-  border: 1px solid $primary-color;
+  border: 1px solid var(--primary-color);
   animation: fadeIn 1s 1.8s backwards;
   transition: all 0.2s ease-in-out;
 
   cursor: pointer;
 
   &:hover {
-    background: $primary-color;
-    color: $white;
+    background: var(--primary-color);
+    color: var(--white);
   }
 }
 
